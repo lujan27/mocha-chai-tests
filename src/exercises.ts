@@ -42,4 +42,23 @@ const sum = function (numbers: number[]) {
 
 const sumTest = sum([1, 5.2, 4, 0, -1]);
 
-export { sum, sumTest };
+/*
+Opposites Attract
+
+DESCRIPTION:
+Timmy & Sarah think they are in love, but around where they live, they will only know once they pick a flower each. If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love.
+
+Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
+*/
+
+const lovefunc = function (flower1: number, flower2: number) {
+  if (flower1 % 2 == 0 && flower2 % 2 != 0) {
+    return true;
+  } else if (flower1 % 2 != 0 && flower2 % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+export { sum, lovefunc, sumTest };
