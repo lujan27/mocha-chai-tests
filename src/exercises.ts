@@ -51,7 +51,7 @@ Timmy & Sarah think they are in love, but around where they live, they will only
 Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
 */
 
-const lovefunc = function (flower1: number, flower2: number) {
+const lovefunc = function (flower1: number, flower2: number): boolean {
   if (flower1 % 2 == 0 && flower2 % 2 != 0) {
     return true;
   } else if (flower1 % 2 != 0 && flower2 % 2 == 0) {
@@ -61,4 +61,31 @@ const lovefunc = function (flower1: number, flower2: number) {
   }
 };
 
-export { sum, lovefunc, sumTest };
+/*
+Return Negative
+
+In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+Examples
+makeNegative(1);    // return -1
+makeNegative(-5);   // return -5
+makeNegative(0);    // return 0
+makeNegative(0.12); // return -0.12
+Notes
+The number can be negative already, in which case no change is required.
+Zero (0) is not checked for any specific sign. Negative zeros make no mathematical sense.
+*/
+
+function makeNegative(num: number): string {
+  let newNum: string;
+
+  if (num >= 0 && num != 0) {
+    newNum = `-${num}`;
+  } else {
+    newNum = num.toString();
+  }
+
+  return newNum;
+}
+
+export { sum, lovefunc, makeNegative, sumTest };
